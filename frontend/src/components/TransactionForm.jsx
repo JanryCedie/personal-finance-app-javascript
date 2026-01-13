@@ -12,7 +12,7 @@ const TransactionForm = ({ onTransactionAdded }) => {
         if (!amount || !description) return;
         setLoading(true);
         try {
-            await axios.post('/api/transactions/', {
+            await axios.post('http://localhost:8000/transactions/', {
                 type,
                 amount: parseFloat(amount),
                 description
